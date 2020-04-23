@@ -1,31 +1,30 @@
-const express = require('express')
-const { randomBytes } = require('crypto')
-// const cors = require('cors')
-// const axios = require('redaxios')
+const express = require('express');
+const bodyParser = require('body-parser');
+const { randomBytes } = require('crypto');
+const cors = require('cors');
 
-const PORT = 4000
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-const app = express()
-app.use(express.json())
-
-const posts = {}
+const posts = {};
 
 app.get('/posts', (req, res) => {
-  res.send(posts)
-})
+  res.send(posts);
+});
 
 app.post('/posts', (req, res) => {
-  const id = randomBytes(4).toString('hex')
-  const { title } = req.body
+  const id = randomBytes(4).toString('hex');
+  const { title } = req.body;
 
   posts[id] = {
     id,
-    title,
-  }
+    title
+  };
 
-  res.status(201).send(posts[id])
-})
+  res.status(201).send(posts[id]);
+});
 
-app.listen(PORT, () => {
-  console.log(`Listening on ${PORT}`)
-})
+app.listen(4000, () => {
+  console.log('Listening on 4000');
+});
