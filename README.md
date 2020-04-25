@@ -12,4 +12,4 @@ This project is part of a [2020 Microservices course](https://www.udemy.com/cour
 2. Open a separate terminal window for each of the 5 service folders (`posts`, `comments`, `moderation`, `query`, `event-bus`), plus one for the React app (`client`).
 3. In each window, run `npm i && npm start`.
 4. The React App should be running on `http://localhost:3000`.
-5. Profit
+5. Keep an eye on each terminal window to witness the magic!
