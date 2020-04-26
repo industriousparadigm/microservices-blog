@@ -1,6 +1,6 @@
 # Microservices blog
 
-The fun here is all about implementing a microservices-based architecture. Every service should be independent of the others and they should run on Docker containers served in a Kubernetes cluster.
+The fun here is all about implementing a microservices-based architecture. Every service should be independent of the others and they should run on Docker containers managed in a Kubernetes cluster.
 
 We are using [skaffold](https://skaffold.dev/) to automate our entire Docker-k8s architecture locally.
 
